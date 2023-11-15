@@ -234,16 +234,6 @@ def do_download(ctx):
         validate_checksum(ctx, 'vault', downloaded_file, url_vault_version)
         extract_and_place_binary(ctx, downloaded_file, ctx.obj['dl_vault_destination'])
 
-    # downloaded_file = download_vault(url, destination)
-    # print(f'Verifying checksum for {downloaded_file}...')
-    # if validate_checksum(downloaded_file, version):
-    #     print('Checksum verified!')
-    #     print(f'Extracting {downloaded_file}...')
-    #     extract_and_place_binary(downloaded_file, destination)
-    #     print('Vault binary is ready to use!')
-    # else:
-    #     print('Error: Checksum verification failed!')
-
 
 # Base click group for the CLI
 @click.group()
